@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffe0f0, #ffd1dc);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: #5c3a52;
+  position: relative;
+}
+
+.container {
+  z-index: 2;
+  position: relative;
+  padding: 2rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  max-width: 90%;
+}
+
+.title {
+  font-size: 2.2rem;
+}
+
+.message {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* Button */
+#surpriseBtn {
+  margin-top: 1.5rem;
+  background: #ffb6c1;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#surpriseBtn:hover {
+  transform: scale(1.1);
+  background: #ff9ab8;
+}
+
+/* Extra message after button click */
+#extraMessage {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #b03a68;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* Canvas for animations */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Final fading note */
+#finalNote {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #924d6d;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .message {
+    font-size: 1rem;
+  }
+  .container {
+    padding: 1rem;
+  }
+  #surpriseBtn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
