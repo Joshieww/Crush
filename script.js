@@ -86,3 +86,30 @@ document.getElementById('surpriseBtn').addEventListener('click', () => {
 setTimeout(() => {
   document.getElementById("finalNote").style.opacity = 1;
 }, 10000);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('surpriseBtn');
+  const audio = document.getElementById('bgMusic');
+  const extra = document.getElementById('extraMessage');
+
+  btn.addEventListener('click', async () => {
+    // try to play/pause the audio on user gesture
+    if (audio) {
+      try {
+        if (audio.paused) {
+          audio.volume = 0.9; // optional
+          await audio.play();
+          btn.textContent = 'Pause music ❚❚';
+        } else {
+          audio.pause();
+          btn.textContent = 'Click for a surprise 💖';
+        }
+      } catch (err) {
+        console.warn('Playback failed:', err);
+      }
+    }
+
+    // existing surprise action
+    extra.textContent = '🌸 Surprise! Hope this makes you smile.';
+  });
+});

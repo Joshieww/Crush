@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>For You 🌸</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <canvas id="flowerCanvas"></canvas>
@@ -13,19 +13,25 @@
     <h1 class="title">Hi, Beautiful 💖</h1>
     <p class="message">
       Just wanted to make you smile today 🌸 <br>
-      You deserve all the flowers in the world.
+      Miss you very much po hehehehehe
     </p>
 
-    <button id="surpriseBtn">Click for a surprise 💖</button>
+    <button id="surpriseBtn">Click for a surprise 🌸</button>
     <div id="extraMessage"></div>
   </div>
 
-  <div id="finalNote">💌 You make the world brighter just by being in it 💌</div>
+  <div id="finalNote">💌 I hope you enjoy your day poooo 💌</div>
 
   <!-- Optional soft background music -->
   <!-- <audio autoplay loop>
     <source src="your-music.mp3" type="audio/mpeg">
   </audio> -->
+
+  <!-- Background music: do not autoplay (start on user interaction) -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="your-music.mp3" type="audio/mpeg">
+    <!-- replace "your-music.mp3" with your file path -->
+  </audio>
 
   <script src="script.js"></script>
 </body>
